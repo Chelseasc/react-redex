@@ -5,10 +5,8 @@ const buttonStyle = {
 };
 
 class Counter extends Component {
-
-    constructor(props) {
-        // console.log('props:::',props)
-        // console.log('enter constructor: ' + props.caption);
+    // 接收传入的prop
+    constructor(props) { // 构造函数中通过参数获得传入prop值，其他函数（比如render()通过this.props获得
         super(props); // 通过super调用父类
 
         this.onClickIncrementButton = this.onClickIncrementButton.bind(this);
@@ -56,7 +54,6 @@ class Counter extends Component {
     }
 
     render() {
-        // console.log('enter render ' + this.props.caption);
         const {caption} = this.props;
         return (
             <div>
